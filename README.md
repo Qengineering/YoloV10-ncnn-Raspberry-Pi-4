@@ -38,6 +38,13 @@ Numbers in **FPS** and reflect only the inference timing. Grabbing frames, post-
 
 ------------
 
+## Opset.
+YoloV10 use layer operations yet unknown to ncnn. To let YoloV10 run on an ncnn framework, [zhouweigogogo](https://github.com/zhouweigogogo) has modified the onnx file by replacing these layers. 
+At the same time, he expanded the original output to three. Some features, like variable input size, aren't supported now. 
+Until the ncnn framework fully supports onnx opset 13, we face these limitations.
+
+------------
+
 ## Dependencies.
 To run the application, you have to:
 - A Raspberry Pi 4 or 5 with a 32 or 64-bit operating system. It can be the Raspberry 64-bit OS, or Ubuntu 18.04 / 20.04. [Install 64-bit OS](https://qengineering.eu/install-raspberry-64-os.html) <br/>
